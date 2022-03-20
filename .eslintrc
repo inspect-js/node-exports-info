@@ -1,0 +1,14 @@
+{
+	"root": true,
+
+	"extends": "@ljharb",
+
+	"rules": {
+		"func-name-matching": ["error", "always"],
+		"id-length": "off",
+		"no-magic-numbers": ["error", {
+			"ignore": [0, 1],
+		}],
+		"sort-keys": "off"
+	},
+}

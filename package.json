@@ -2,13 +2,24 @@
 	"name": "node-exports-info",
 	"version": "0.0.0",
 	"description": "Info about node `exports` field support: version ranges, categories, etc.",
-	"main": "index.js",
+	"main": false,
 	"exports": {
-		".": "./index.js",
+		"./getCategoriesForRange": "./getCategoriesForRange.js",
+		"./getCategory": "./getCategory.js",
+		"./getConditionsForCategory": "./getConditionsForCategory.js",
+		"./getRange": "./getRange.js",
+		"./getRangePairs": "./getRangePairs.js",
 		"./package.json": "./package.json"
 	},
+	"sideEffects": false,
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"lint": "eslint --ext=js,mjs .",
+		"pretest": "npm run lint",
+		"tests-only": "nyc tape 'test/**/*.js'",
+		"test": "npm run tests-only",
+		"posttest": "aud --production",
+		"version": "auto-changelog && git add CHANGELOG.md",
+		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
 	},
 	"repository": {
 		"type": "git",
@@ -31,9 +42,38 @@
 		"import"
 	],
 	"author": "Jordan Harband <ljharb@gmail.com>",
+	"funding": {
+		"url": "https://github.com/sponsors/ljharb"
+	},
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/inspect-js/node-exports-info/issues"
 	},
-	"homepage": "https://github.com/inspect-js/node-exports-info#readme"
+	"homepage": "https://github.com/inspect-js/node-exports-info#readme",
+	"dependencies": {
+		"array.prototype.find": "^2.1.2",
+		"array.prototype.flatmap": "^1.2.5",
+		"object.entries": "^1.1.5",
+		"semver": "^6.3.0"
+	},
+	"devDependencies": {
+		"@ljharb/eslint-config": "^20.2.3",
+		"aud": "^2.0.0",
+		"auto-changelog": "^2.4.0",
+		"eslint": "=8.8.0",
+		"for-each": "^0.3.3",
+		"nyc": "^10.3.2",
+		"tape": "^5.5.2"
+	},
+	"engines": {
+		"node": ">= 0.4"
+	},
+	"auto-changelog": {
+		"output": "CHANGELOG.md",
+		"template": "keepachangelog",
+		"unreleased": false,
+		"commitLimit": false,
+		"backfillLimit": false,
+		"hideCredit": true
+	}
 }
