@@ -1,0 +1,39 @@
+{
+	"name": "node-exports-info",
+	"version": "0.0.0",
+	"description": "Info about node `exports` field support: version ranges, categories, etc.",
+	"main": "index.js",
+	"exports": {
+		".": "./index.js",
+		"./package.json": "./package.json"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/inspect-js/node-exports-info.git"
+	},
+	"keywords": [
+		"node",
+		"exports",
+		"support",
+		"info",
+		"ranges",
+		"categories",
+		"conditions",
+		"patterns",
+		"pattern trailers",
+		"experimental",
+		"esm",
+		"cjs",
+		"require",
+		"import"
+	],
+	"author": "Jordan Harband <ljharb@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/inspect-js/node-exports-info/issues"
+	},
+	"homepage": "https://github.com/inspect-js/node-exports-info#readme"
+}
