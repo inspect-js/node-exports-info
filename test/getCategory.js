@@ -15,6 +15,11 @@ test('getCategory', function (t) {
 		RangeError,
 		'invalid version throws'
 	);
+	t['throws'](
+		function () { getCategory('^1.2.3'); },
+		RangeError,
+		'semver range throws'
+	);
 
 	t.doesNotThrow(
 		function () { getCategory(process.version); },
