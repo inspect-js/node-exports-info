@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.2](https://github.com/inspect-js/node-exports-info/compare/v1.1.1...v1.1.2) - 2022-03-22
+
+### Commits
+
+- [Fix] turns out all `patterns` nodes have a broken dir-slash [`3e8310b`](https://github.com/inspect-js/node-exports-info/commit/3e8310b79496de9d177487c3b5d199cd66630d9d)
+
 ## [v1.1.1](https://github.com/inspect-js/node-exports-info/compare/v1.1.0...v1.1.1) - 2022-03-21
 
 ### Commits
