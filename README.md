@@ -15,13 +15,16 @@ Info about node `exports` field support: version ranges, categories, etc.
  - `pre-exports`: versions before node supported `exports` in any way (`< 12.17`)
  - `broken`: versions that have a broken `exports` implementation. These only support the string form, and array fallbacks. (`13.0 - 13.2`)
  - `experimental`: versions where `exports` support was experimental. These only support the "default" condition in the object form. (`13.3 - 13.6`)
- - `conditions`: the first versions where `exports` support was unflagged. (`12.17 - 12.19 || ^13.7 || 14.0 - 14.12`)
+ - `conditions`: the first versions where `exports` support was unflagged. (`12.17 - 12.19 || 13.7 - 13.13`)
+ - `broken-dir-slash-conditions`: `conditions`, but directory exports (ending in `./`) are broken in these versions (`^13.14 || 14.0 - 14.12`)
  - `patterns`: support for "patterns" was added in these versions. (`^12.20 || 14.13 - 14.18 || 15.x || 16.0 - 16.8`)
+ - `broken-dir-slash-patterns`: `patterns`, but directory exports (ending in `./`) are broken in these versions (`^13.14 || 14.0 - 14.12`)
  - `pattern-trailers`: support for "pattern trailers" was added in these versions (`^14.19 || >= 16.9`)
+ - `pattern-trailers-no-dir-slash`: support for directory exports (ending in `./`) was removed for these versions (`>= 17`)
 
 ## Entry points
  - `node-exports-info/getCategoriesForRange`: takes a node semver version range; returns an array of categories that overlap it
- - `node-exports-info/getCategory`: takes an optional node semver version (defaults to the current node version); returns the category that matches it
+ - `node-exports-info/getCategory`: takes an optional node semver version (defaults to the current node version); returns the latest category that matches it
  - `node-exports-info/getConditionsForCategory`: takes a category; returns an array of `exports` "conditions" that is supported, or `null` if `exports` itself is not supported
  - `node-exports-info/getRange`: takes a category; returns the node semver version range that matches it
  - `node-exports-info/getRangePairs`: returns an array of entries - each a tuple of "semver range" and "category"
