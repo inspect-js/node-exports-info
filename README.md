@@ -17,8 +17,7 @@ Info about node `exports` field support: version ranges, categories, etc.
  - `experimental`: versions where `exports` support was experimental. These only support the "default" condition in the object form. (`13.3 - 13.6`)
  - `conditions`: the first versions where `exports` support was unflagged. (`13.7 - 13.13`)
  - `broken-dir-slash-conditions`: `conditions`, but directory exports (ending in `./`) are broken in these versions (`12.17 - 12.19 || ^13.14 || 14.0 - 14.12`)
- - `patterns`: support for "patterns" was added in these versions. (`16.0 - 16.8`)
- - `broken-dir-slash-patterns`: `patterns`, but directory exports (ending in `./`) are broken in these versions (`^12.20 || 14.13 - 14.18 || 15.x`)
+ - `patterns`: support for "patterns" was added in these versions, and directory exports (ending in `./`) are broken (`^12.20 || 14.13 - 14.18 || 15.x || 16.0 - 16.8`)
  - `pattern-trailers`: support for "pattern trailers" was added in these versions (`^14.19 || >= 16.9`)
  - `pattern-trailers-no-dir-slash`: support for directory exports (ending in `./`) was removed for these versions (`>= 17`)
 
