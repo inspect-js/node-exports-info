@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.3](https://github.com/inspect-js/node-exports-info/compare/v1.1.2...v1.1.3) - 2022-03-24
+
+### Commits
+
+- [Fix] `node v13.13 also has broken dir-slash [`cc9f891`](https://github.com/inspect-js/node-exports-info/commit/cc9f891f8679a1e4b1063d2d91546b72f82be011)
+- [meta] add missing `version` config [`6a7f8c6`](https://github.com/inspect-js/node-exports-info/commit/6a7f8c629d9fb41315c3cea2c514d0398c6be2c7)
+
 ## [v1.1.2](https://github.com/inspect-js/node-exports-info/compare/v1.1.1...v1.1.2) - 2022-03-22
 
 ### Commits
