@@ -24,7 +24,19 @@ test('getConditionsForCategory', function (t) {
 				);
 			} else {
 				var conditions = getConditionsForCategory(category);
-				st.ok(Array.isArray(conditions), 'returns an array');
+				st.ok(Array.isArray(conditions), 'moduleSystem none: returns an array');
+
+				var requireConditions = getConditionsForCategory(category, 'require');
+				st.ok(Array.isArray(requireConditions), 'moduleSystem require: returns an array');
+
+				var importConditions = getConditionsForCategory(category, 'import');
+				st.ok(Array.isArray(importConditions), 'moduleSystem import: returns an array');
+
+				st['throws'](
+					function () { getConditionsForCategory(category, 'not a thing'); },
+					TypeError,
+					'invalid moduleSystem throws'
+				);
 			}
 
 			st.end();
