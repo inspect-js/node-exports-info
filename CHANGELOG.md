@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.0](https://github.com/inspect-js/node-exports-info/compare/v1.1.3...v1.2.0) - 2022-04-08
+
+### Commits
+
+- Revert "[Tests] temporarily use actions instead of composable workflows" [`1d12795`](https://github.com/inspect-js/node-exports-info/commit/1d1279531112e422d1b67cad2bc267684ec0ca81)
+- [New] `getConditionsForCategory`: add optional `moduleSystem` argument [`b4164bd`](https://github.com/inspect-js/node-exports-info/commit/b4164bde3658ec66c08319e411f01096939a734a)
+- [actions] restrict permissions [`d0f58ef`](https://github.com/inspect-js/node-exports-info/commit/d0f58ef3696498a3030eb378ce0c98d32e8c7bba)
+- [Dev Deps] update `tape` [`afaa392`](https://github.com/inspect-js/node-exports-info/commit/afaa3928208f93f308e1045eb9c5e8e50cea4e18)
+
 ## [v1.1.3](https://github.com/inspect-js/node-exports-info/compare/v1.1.2...v1.1.3) - 2022-03-24
 
 ### Commits
