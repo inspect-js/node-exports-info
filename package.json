@@ -54,8 +54,8 @@
 	},
 	"homepage": "https://github.com/inspect-js/node-exports-info#readme",
 	"dependencies": {
-		"array.prototype.find": "^2.1.2",
-		"array.prototype.flatmap": "^1.2.5",
+		"array.prototype.find": "^2.2.0",
+		"array.prototype.flatmap": "^1.3.0",
 		"object.entries": "^1.1.5",
 		"semver": "^6.3.0"
 	},
