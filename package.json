@@ -1,6 +1,6 @@
 {
 	"name": "node-exports-info",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Info about node `exports` field support: version ranges, categories, etc.",
 	"main": false,
 	"exports": {

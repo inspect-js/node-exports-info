@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.1](https://github.com/inspect-js/node-exports-info/compare/v1.2.0...v1.2.1) - 2023-12-15
+
+### Commits
+
+- [meta] use `npmignore` to autogenerate an npmignore file [`e79731c`](https://github.com/inspect-js/node-exports-info/commit/e79731c10ea60ddd06cc5d8ffe0acd2ac5ca051a)
+- [actions] update rebase action to use reusable workflow [`20eab87`](https://github.com/inspect-js/node-exports-info/commit/20eab879a247e893c3566f5327a0e1b8978e0ccc)
+- [Deps] update `array.prototype.find`, `array.prototype.flatmap`, `object.entries`, `semver` [`7f3bf1b`](https://github.com/inspect-js/node-exports-info/commit/7f3bf1bce617bab72f5091f150549fc344beb0a0)
+- [Dev Deps] update `@ljharb/eslint-config`, `aud`, `npmignore`, `tape` [`a30b7b7`](https://github.com/inspect-js/node-exports-info/commit/a30b7b7880de4f2aa2f45537233bb5e30abc3169)
+- [Dev Deps] update `@ljharb/eslint-config`, `aud`, `tape` [`1f262ad`](https://github.com/inspect-js/node-exports-info/commit/1f262ad99324825a8fd9b3ce5cf425f4a849a6c4)
+- [Deps] update `array.prototype.find`, `array.prototype.flatmap` [`660e637`](https://github.com/inspect-js/node-exports-info/commit/660e637bf7a5cfbdf90e5ad174a437cf381c5c3d)
+- [meta] add `safe-publish-latest` [`bcfb161`](https://github.com/inspect-js/node-exports-info/commit/bcfb161a37311a7791147addceda91ca9ef4a006)
+- [Robustness] `ranges`: make it a null object [`5a6d476`](https://github.com/inspect-js/node-exports-info/commit/5a6d47631a6491ec7517b8a2ce3a7ba9ccece461)
+
 ## [v1.2.0](https://github.com/inspect-js/node-exports-info/compare/v1.1.3...v1.2.0) - 2022-04-08
 
 ### Commits
