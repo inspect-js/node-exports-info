@@ -27,6 +27,7 @@ Info about node `exports` field support: version ranges, categories, etc.
  - `node-exports-info/getConditionsForCategory`: takes a category and an optional `moduleSystem` (`'require'` or `'import'`); returns an array of `exports` "conditions" that is supported, or `null` if `exports` itself is not supported
  - `node-exports-info/getRange`: takes a category; returns the node semver version range that matches it
  - `node-exports-info/getRangePairs`: returns an array of entries - each a tuple of "semver range" and "category"
+ - `node-exports-info/isCategory`: takes a category; returns true if it’s a known category
 
 ## Related packages
  - [`has-package-exports`](https://www.npmjs.com/package/has-package-exports): feature-detect your node version’s `exports` support
