@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+	__proto__: null,
 	// TODO: add "JSON imports"
 	'>= 17': 'pattern-trailers-no-dir-slash',
 	'^14.19 || ^16.9': 'pattern-trailers',
