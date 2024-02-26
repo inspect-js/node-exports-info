@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.3.1](https://github.com/inspect-js/node-exports-info/compare/v1.3.0...v1.3.1) - 2024-02-26
+
+### Commits
+
+- add types [`c3449ed`](https://github.com/inspect-js/node-exports-info/commit/c3449edd1e3c0e1dd019c3c5ef9f075305577372)
+- [actions] skip ls check on node &lt; 10; remove redundant finisher [`8a88b7b`](https://github.com/inspect-js/node-exports-info/commit/8a88b7b82a05787540541bd40dd92c4d73083e19)
+- [actions] remove erroneous `none` permission [`9145df6`](https://github.com/inspect-js/node-exports-info/commit/9145df664d6ccbb49a812ccadb35ecad5957a6ba)
+- [Dev Deps] update `tape` [`ff1f4de`](https://github.com/inspect-js/node-exports-info/commit/ff1f4ded536ea936a96c1c01f026768abc41ac27)
+
 ## [v1.3.0](https://github.com/inspect-js/node-exports-info/compare/v1.2.1...v1.3.0) - 2023-12-15
 
 ### Commits
