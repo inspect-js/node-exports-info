@@ -1,5 +1,6 @@
 'use strict';
 
+/** @type {import('./ranges')} */
 module.exports = {
 	__proto__: null,
 	// TODO: add "JSON imports"

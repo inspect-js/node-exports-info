@@ -8,6 +8,7 @@ var getRangePairs = require('../getRangePairs');
 
 test('getConditionsForCategory', function (t) {
 	t['throws'](
+		// @ts-expect-error
 		function () { getConditionsForCategory('not a category'); },
 		RangeError,
 		'invalid category throws'
@@ -33,6 +34,7 @@ test('getConditionsForCategory', function (t) {
 				st.ok(Array.isArray(importConditions), 'moduleSystem import: returns an array');
 
 				st['throws'](
+					// @ts-expect-error
 					function () { getConditionsForCategory(category, 'not a thing'); },
 					TypeError,
 					'invalid moduleSystem throws'

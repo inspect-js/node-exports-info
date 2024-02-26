@@ -8,6 +8,7 @@ var getRangePairs = require('../getRangePairs');
 
 test('getRange', function (t) {
 	t['throws'](
+		// @ts-expect-error
 		function () { getRange('not a category'); },
 		RangeError,
 		'invalid category throws'

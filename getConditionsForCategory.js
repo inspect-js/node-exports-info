@@ -5,9 +5,12 @@ var entries = require('object.entries');
 
 var ranges = require('./ranges');
 
+/** @type {import('./getConditionsForCategory')} */
 module.exports = function getConditionsForCategory(category) {
+	/** @type {import('./types').RangePair | undefined} */
 	var found = find(
 		entries(ranges),
+		/** @type {(entry: import('./types').RangePair) => boolean} */
 		function (entry) {
 			var cat = entry[1];
 			return cat === category;
