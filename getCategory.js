@@ -1,6 +1,5 @@
 'use strict';
 
-var find = require('array.prototype.find');
 var entries = require('object.entries');
 var satisfies = require('semver').satisfies;
 
@@ -9,17 +8,13 @@ var ranges = require('./ranges');
 /** @type {import('./getCategory')} */
 module.exports = function getCategory() {
 	var version = arguments.length > 0 ? arguments[0] : process.version;
-	/** @type {import('./types').RangePair | undefined} */
-	var found = find(
-		entries(ranges),
-		/** @type {(entry: import('./types').RangePair) => boolean} */
-		function (entry) {
-			var range = entry[0];
-			return satisfies(version, range);
+	var rangeEntries = entries(ranges);
+	for (var i = 0; i < rangeEntries.length; i += 1) {
+		var entry = rangeEntries[i];
+		if (satisfies(version, entry[0])) {
+			return entry[1];
 		}
-	);
-	if (!found) {
-		throw new RangeError('no category found for version ' + version);
 	}
-	return found[1];
+
+	throw new RangeError('no category found for version ' + version);
 };
