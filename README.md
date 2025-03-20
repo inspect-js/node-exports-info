@@ -18,8 +18,12 @@ Info about node `exports` field support: version ranges, categories, etc.
  - `conditions`: the first versions where `exports` support was unflagged. (`13.7 - 13.12`)
  - `broken-dir-slash-conditions`: `conditions`, but directory exports (ending in `./`) are broken in these versions (`12.17 - 12.19 || ^13.13 || 14.0 - 14.12`)
  - `patterns`: support for "patterns" was added in these versions, and directory exports (ending in `./`) are broken (`^12.20 || 14.13 - 14.18 || 15.x || 16.0 - 16.8`)
- - `pattern-trailers`: support for "pattern trailers" was added in these versions (`^14.19 || >= 16.9`)
- - `pattern-trailers-no-dir-slash`: support for directory exports (ending in `./`) was removed for these versions (`>= 17`)
+ - `pattern-trailers`: support for "pattern trailers" was added in these versions (`^14.19 || 16.9 - 16.13`)
+ - `pattern-trailers+json-imports`: `pattern-trailers`, and JSON can be `import`ed (`^16.14`)
+ - `pattern-trailers-no-dir-slash`: support for directory exports (ending in `./`) was removed for these versions (`17.0`)
+ - `pattern-trailers-no-dir-slash+json-imports`: `pattern-trailers-no-dir-slash`, and JSON can be `import`ed (`17.1 - 19 || 20 - 20.18 || ^21 || 22 - 22.11`)
+ - `require-esm`: ESM files can be `require`d (`23 - 23.5 || ^22.12 || ^20.19`)
+ - `strips-types`: these versions also automatically strip types from typescript files, for both `require` and `import` (`>= 23.6`)
 
 ## Entry points
  - `node-exports-info/getCategoriesForRange`: takes a node semver version range; returns an array of categories that overlap it
