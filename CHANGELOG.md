@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.4.0](https://github.com/inspect-js/node-exports-info/compare/v1.3.1...v1.4.0) - 2026-01-12
+
+### Commits
+
+- [Refactor] use loops instead of `array.prototype.find` [`d58884b`](https://github.com/inspect-js/node-exports-info/commit/d58884b03ce0ac49ba74f0ac923d5388f468af7c)
+- [types] use shared config [`136778d`](https://github.com/inspect-js/node-exports-info/commit/136778db519a5b7e3b1ad13f40d71e4c05de196e)
+- [Dev Deps] update `eslint` [`616920c`](https://github.com/inspect-js/node-exports-info/commit/616920cc40f5be64eaca8f02626d3543ae4816d3)
+- [New] add type stripping, require(esm), JSON imports [`75b97f1`](https://github.com/inspect-js/node-exports-info/commit/75b97f1d7108207dadcfd3ab7010cd15ed2aebe1)
+- [actions] split out node 10-20, and 20+ [`7e992d2`](https://github.com/inspect-js/node-exports-info/commit/7e992d25b4d144405f9fcd51d2ef80f0cd614dd3)
+- [Dev Deps] update `@arethetypeswrong/cli`, `@ljharb/eslint-config`, `@types/object-inspect`, `auto-changelog`, `es-value-fixtures`, `object-inspect`, `tape` [`417745a`](https://github.com/inspect-js/node-exports-info/commit/417745a3186a03b1b2ddb26aa7c0d16fd59edb91)
+- [Robustness] use `es-errors` [`c25eda7`](https://github.com/inspect-js/node-exports-info/commit/c25eda77ad517d7b01be662e1ce9b86974b49f87)
+- [Dev Deps] update `@arethetypeswrong/cli`, `@ljharb/tsconfig`, `@types/tape`, `es-value-fixtures`, `for-each`, `object-inspect` [`84c5d1b`](https://github.com/inspect-js/node-exports-info/commit/84c5d1b8eb670b985b1ae25a32b198a61383f34d)
+- [Fix] update the strips-types node ranges [`e6ef526`](https://github.com/inspect-js/node-exports-info/commit/e6ef52685f5d2c05b22e5bac03086b8a2b0836e0)
+- [Dev Deps] update `@arethetypeswrong/cli`, `@ljharb/eslint-config`, `eslint`, `npmignore` [`f10c9d8`](https://github.com/inspect-js/node-exports-info/commit/f10c9d8373c6876872144ed33a9abadcdbc3265a)
+- [readme] fix badges [`0dd9d62`](https://github.com/inspect-js/node-exports-info/commit/0dd9d624c17c135def20f0e43d095fd555640919)
+- [Deps] update `array.prototype.flatmap`, `object.entries` [`140b885`](https://github.com/inspect-js/node-exports-info/commit/140b8852614b64c23444109377df4cbb41638647)
+- [Deps] update `array.prototype.find`, `object.entries` [`0d87ad7`](https://github.com/inspect-js/node-exports-info/commit/0d87ad7fe6e58eda7424bffb311480b65e865af8)
+- [Tests] replace `aud` with `npm audit` [`5d03f96`](https://github.com/inspect-js/node-exports-info/commit/5d03f964dc4e48b02a2ae53e7376488568115a97)
+- [Tests] use `@arethetypeswrong/cli` [`5a2ef68`](https://github.com/inspect-js/node-exports-info/commit/5a2ef68cc53940701533240f2e251a502e00aaf1)
+- [Dev Deps] update `@arethetypeswrong/cli` [`0a430bc`](https://github.com/inspect-js/node-exports-info/commit/0a430bc15e029d115ee6d6562a7c835ca9623f90)
+
 ## [v1.3.1](https://github.com/inspect-js/node-exports-info/compare/v1.3.0...v1.3.1) - 2024-02-26
 
 ### Commits
