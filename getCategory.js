@@ -1,5 +1,6 @@
 'use strict';
 
+var $RangeError = require('es-errors/range');
 var entries = require('object.entries');
 var satisfies = require('semver').satisfies;
 
@@ -16,5 +17,5 @@ module.exports = function getCategory() {
 		}
 	}
 
-	throw new RangeError('no category found for version ' + version);
+	throw new $RangeError('no category found for version ' + version);
 };

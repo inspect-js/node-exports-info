@@ -1,5 +1,7 @@
 'use strict';
 
+var $RangeError = require('es-errors/range');
+var $TypeError = require('es-errors/type');
 var entries = require('object.entries');
 
 var ranges = require('./ranges');
@@ -13,12 +15,12 @@ module.exports = function getConditionsForCategory(category) {
 		found = entry[1] === category;
 	}
 	if (!found) {
-		throw new RangeError('invalid category ' + category);
+		throw new $RangeError('invalid category ' + category);
 	}
 
 	var moduleSystem = arguments.length > 1 ? arguments[1] : null;
 	if (arguments.length > 1 && moduleSystem !== 'import' && moduleSystem !== 'require') {
-		throw new TypeError('invalid moduleSystem: must be `\'require\'` or `\'import\'` if provided, got' + moduleSystem);
+		throw new $TypeError('invalid moduleSystem: must be `\'require\'` or `\'import\'` if provided, got' + moduleSystem);
 	}
 
 	if (category === 'experimental') {

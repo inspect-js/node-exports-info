@@ -1,5 +1,6 @@
 'use strict';
 
+var $RangeError = require('es-errors/range');
 var entries = require('object.entries');
 
 var ranges = require('./ranges');
@@ -14,5 +15,5 @@ module.exports = function getRange(category) {
 		}
 	}
 
-	throw new RangeError('no version range found for category ' + category);
+	throw new $RangeError('no version range found for category ' + category);
 };
