@@ -22,8 +22,8 @@ Info about node `exports` field support: version ranges, categories, etc.
  - `pattern-trailers+json-imports`: `pattern-trailers`, and JSON can be `import`ed (`^16.14`)
  - `pattern-trailers-no-dir-slash`: support for directory exports (ending in `./`) was removed for these versions (`17.0`)
  - `pattern-trailers-no-dir-slash+json-imports`: `pattern-trailers-no-dir-slash`, and JSON can be `import`ed (`17.1 - 19 || 20 - 20.18 || ^21 || 22 - 22.11`)
- - `require-esm`: ESM files can be `require`d (`23 - 23.5 || ^22.12 || ^20.19`)
- - `strips-types`: these versions also automatically strip types from typescript files, for both `require` and `import` (`>= 23.6`)
+ - `require-esm`: ESM files can be `require`d (`23 - 23.5 || 22.12 - 22.17 || ^20.19`)
+ - `strips-types`: these versions also automatically strip types from typescript files, for both `require` and `import` (`>= 23.6 || ^22.18`)
 
 ## Entry points
  - `node-exports-info/getCategoriesForRange`: takes a node semver version range; returns an array of categories that overlap it
