@@ -47,6 +47,31 @@ var withAddonsRequire = [
 	'require',
 	'default'
 ];
+/** @type {['import', 'node-addons', 'node', 'require', 'module-sync', 'default']} */
+var withAddonsModuleSync = [
+	'import',
+	'node-addons',
+	'node',
+	'require',
+	'module-sync',
+	'default'
+];
+/** @type {['import', 'node-addons', 'node', 'module-sync', 'default']} */
+var withAddonsModuleSyncImport = [
+	'import',
+	'node-addons',
+	'node',
+	'module-sync',
+	'default'
+];
+/** @type {['node-addons', 'node', 'require', 'module-sync', 'default']} */
+var withAddonsModuleSyncRequire = [
+	'node-addons',
+	'node',
+	'require',
+	'module-sync',
+	'default'
+];
 
 // categories that support node-addons condition (added in v14.19/v16.10)
 /** @type {{ [k: string]: boolean | null | undefined }} */
@@ -56,6 +81,14 @@ var nodeAddonsCategories = {
 	'pattern-trailers+json-imports': true,
 	'pattern-trailers-no-dir-slash': true,
 	'pattern-trailers-no-dir-slash+json-imports': true,
+	'require-esm': true,
+	'strips-types': true
+};
+
+// categories that support module-sync condition (added in v22.12)
+/** @type {{ [k: string]: boolean | null | undefined }} */
+var moduleSyncCategories = {
+	__proto__: null,
 	'require-esm': true,
 	'strips-types': true
 };
@@ -79,7 +112,11 @@ module.exports = function getConditionsForCategory(category) {
 	}
 
 	var hasAddons = !!nodeAddonsCategories[category];
+	var hasModuleSync = !!moduleSyncCategories[category];
 
+	if (hasAddons && hasModuleSync) {
+		return moduleSystem === 'import' ? withAddonsModuleSyncImport : moduleSystem === 'require' ? withAddonsModuleSyncRequire : withAddonsModuleSync;
+	}
 	if (hasAddons) {
 		return moduleSystem === 'import' ? withAddonsImport : moduleSystem === 'require' ? withAddonsRequire : withAddons;
 	}
