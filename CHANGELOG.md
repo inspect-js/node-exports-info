@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.5.0](https://github.com/inspect-js/node-exports-info/compare/v1.4.0...v1.5.0) - 2026-01-16
+
+### Commits
+
+- [New] add `node-addons` condition support [`fd11809`](https://github.com/inspect-js/node-exports-info/commit/fd118093e55e8fcb1b3b1c90779e277a6806bc73)
+- [New] add `module-sync` condition support [`6cc5123`](https://github.com/inspect-js/node-exports-info/commit/6cc51230673a8846d5b1d2ec4124e35c9d6f077f)
+- [New] add `subpath-imports-slash` category for `#/` subpath imports [`547f4ef`](https://github.com/inspect-js/node-exports-info/commit/547f4ef3f62e05032cb7b4d7e4f541eea380fcbf)
+
 ## [v1.4.0](https://github.com/inspect-js/node-exports-info/compare/v1.3.1...v1.4.0) - 2026-01-12
 
 ### Commits
