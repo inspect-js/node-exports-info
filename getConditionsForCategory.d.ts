@@ -8,6 +8,9 @@ declare function getConditionsForCategory(
     | ['import', 'node', 'default']
     | ['node', 'require', 'default']
     | ['import', 'node', 'require', 'default']
+    | ['import', 'node-addons', 'node', 'default']
+    | ['node-addons', 'node', 'require', 'default']
+    | ['import', 'node-addons', 'node', 'require', 'default']
     | null
 );
 

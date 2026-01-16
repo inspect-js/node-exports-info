@@ -6,4 +6,4 @@ export type Range = Exclude<keyof typeof ranges, '__proto__'>;
 
 export type RangePair = [Range, Category];
 
-export type Condition = 'node' | 'import' | 'require' | 'default';
+export type Condition = 'node' | 'node-addons' | 'import' | 'require' | 'default';

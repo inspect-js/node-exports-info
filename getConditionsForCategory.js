@@ -2,19 +2,67 @@
 
 var $RangeError = require('es-errors/range');
 var $TypeError = require('es-errors/type');
-var entries = require('object.entries');
 
-var ranges = require('./ranges');
+var isCategory = require('./isCategory');
+
+// pre-computed condition sets
+/** @type {['import', 'node', 'require', 'default']} */
+var base = [
+	'import',
+	'node',
+	'require',
+	'default'
+];
+/** @type {['import', 'node', 'default']} */
+var baseImport = [
+	'import',
+	'node',
+	'default'
+];
+/** @type {['node', 'require', 'default']} */
+var baseRequire = [
+	'node',
+	'require',
+	'default'
+];
+/** @type {['import', 'node-addons', 'node', 'require', 'default']} */
+var withAddons = [
+	'import',
+	'node-addons',
+	'node',
+	'require',
+	'default'
+];
+/** @type {['import', 'node-addons', 'node', 'default']} */
+var withAddonsImport = [
+	'import',
+	'node-addons',
+	'node',
+	'default'
+];
+/** @type {['node-addons', 'node', 'require', 'default']} */
+var withAddonsRequire = [
+	'node-addons',
+	'node',
+	'require',
+	'default'
+];
+
+// categories that support node-addons condition (added in v14.19/v16.10)
+/** @type {{ [k: string]: boolean | null | undefined }} */
+var nodeAddonsCategories = {
+	__proto__: null,
+	'pattern-trailers': true,
+	'pattern-trailers+json-imports': true,
+	'pattern-trailers-no-dir-slash': true,
+	'pattern-trailers-no-dir-slash+json-imports': true,
+	'require-esm': true,
+	'strips-types': true
+};
 
 /** @type {import('./getConditionsForCategory')} */
 module.exports = function getConditionsForCategory(category) {
-	var rangeEntries = entries(ranges);
-	var found = false;
-	for (var i = 0; !found && i < rangeEntries.length; i++) {
-		var entry = rangeEntries[i];
-		found = entry[1] === category;
-	}
-	if (!found) {
+	if (!isCategory(category)) {
 		throw new $RangeError('invalid category ' + category);
 	}
 
@@ -26,27 +74,14 @@ module.exports = function getConditionsForCategory(category) {
 	if (category === 'experimental') {
 		return ['default'];
 	}
-	if (category !== 'broken' && category !== 'pre-exports') {
-		if (moduleSystem === 'import') {
-			return [
-				'import',
-				'node',
-				'default'
-			];
-		}
-		if (moduleSystem === 'require') {
-			return [
-				'node',
-				'require',
-				'default'
-			];
-		}
-		return [
-			'import',
-			'node',
-			'require',
-			'default'
-		];
+	if (category === 'broken' || category === 'pre-exports') {
+		return null;
 	}
-	return null;
+
+	var hasAddons = !!nodeAddonsCategories[category];
+
+	if (hasAddons) {
+		return moduleSystem === 'import' ? withAddonsImport : moduleSystem === 'require' ? withAddonsRequire : withAddons;
+	}
+	return moduleSystem === 'import' ? baseImport : moduleSystem === 'require' ? baseRequire : base;
 };
