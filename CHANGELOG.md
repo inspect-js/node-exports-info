@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.6.0](https://github.com/inspect-js/node-exports-info/compare/v1.5.1...v1.6.0) - 2026-01-28
+
+### Commits
+
+- [New] add `getCategoryFlags` and `getCategoryInfo` APIs [`164024c`](https://github.com/inspect-js/node-exports-info/commit/164024c07e4612b8cfd470730b51f9ec78bdead2)
+- [readme] use curly quotes in prose [`945e57a`](https://github.com/inspect-js/node-exports-info/commit/945e57a650d7d0ae085c84e11e493d939e77d05f)
+
 ## [v1.5.1](https://github.com/inspect-js/node-exports-info/compare/v1.5.0...v1.5.1) - 2026-01-28
 
 ### Commits
