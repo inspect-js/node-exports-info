@@ -12,11 +12,11 @@ Info about node `exports` field support: version ranges, categories, etc.
 ## Categories
  - `pre-exports`: versions before node supported `exports` in any way (`< 12.17`)
  - `broken`: versions that have a broken `exports` implementation. These only support the string form, and array fallbacks. (`13.0 - 13.2`)
- - `experimental`: versions where `exports` support was experimental. These only support the "default" condition in the object form. (`13.3 - 13.6`)
+ - `experimental`: versions where `exports` support was experimental. These only support the “default” condition in the object form. (`13.3 - 13.6`)
  - `conditions`: the first versions where `exports` support was unflagged. (`13.7 - 13.12`)
  - `broken-dir-slash-conditions`: `conditions`, but directory exports (ending in `./`) are broken in these versions (`12.17 - 12.19 || ^13.13 || 14.0 - 14.12`)
- - `patterns`: support for "patterns" was added in these versions, and directory exports (ending in `./`) are broken (`^12.20 || 14.13 - 14.18 || 15.x || 16.0 - 16.8`)
- - `pattern-trailers`: support for "pattern trailers" was added in these versions (`^14.19 || 16.9 - 16.13`)
+ - `patterns`: support for “patterns” was added in these versions, and directory exports (ending in `./`) are broken (`^12.20 || 14.13 - 14.18 || 15.x || 16.0 - 16.8`)
+ - `pattern-trailers`: support for “pattern trailers” was added in these versions (`^14.19 || 16.9 - 16.13`)
  - `pattern-trailers+json-imports`: `pattern-trailers`, and JSON can be `import`ed (`^16.14`)
  - `pattern-trailers-no-dir-slash`: support for directory exports (ending in `./`) was removed for these versions (`17.0`)
  - `pattern-trailers-no-dir-slash+json-imports`: `pattern-trailers-no-dir-slash`, and JSON can be `import`ed (`17.1 - 19 || 20 - 20.18 || ^21 || 22 - 22.11`)
@@ -29,7 +29,7 @@ Info about node `exports` field support: version ranges, categories, etc.
  - `node-exports-info/getCategory`: takes an optional node semver version (defaults to the current node version); returns the latest category that matches it
  - `node-exports-info/getConditionsForCategory`: takes a category and an optional `moduleSystem` (`'require'` or `'import'`); returns an array of `exports` "conditions" that is supported, or `null` if `exports` itself is not supported
  - `node-exports-info/getRange`: takes a category; returns the node semver version range that matches it
- - `node-exports-info/getRangePairs`: returns an array of entries - each a tuple of "semver range" and "category"
+ - `node-exports-info/getRangePairs`: returns an array of entries - each a tuple of “semver range” and “category”
  - `node-exports-info/isCategory`: takes a category; returns true if it’s a known category
 
 ## Related packages
