@@ -27,6 +27,8 @@ Info about node `exports` field support: version ranges, categories, etc.
 ## Entry points
  - `node-exports-info/getCategoriesForRange`: takes a node semver version range; returns an array of categories that overlap it
  - `node-exports-info/getCategory`: takes an optional node semver version (defaults to the current node version); returns the latest category that matches it
+ - `node-exports-info/getCategoryFlags`: takes a category; returns an object with boolean flags `{ patterns, patternTrailers, dirSlash }` indicating which `exports` features are supported
+ - `node-exports-info/getCategoryInfo`: takes a category and an optional `moduleSystem` (`'require'` or `'import'`); returns an object with `conditions` (array or null) and `flags` (from `getCategoryFlags`)
  - `node-exports-info/getConditionsForCategory`: takes a category and an optional `moduleSystem` (`'require'` or `'import'`); returns an array of `exports` "conditions" that is supported, or `null` if `exports` itself is not supported
  - `node-exports-info/getRange`: takes a category; returns the node semver version range that matches it
  - `node-exports-info/getRangePairs`: returns an array of entries - each a tuple of “semver range” and “category”

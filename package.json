@@ -6,6 +6,8 @@
 	"exports": {
 		"./getCategoriesForRange": "./getCategoriesForRange.js",
 		"./getCategory": "./getCategory.js",
+		"./getCategoryFlags": "./getCategoryFlags.js",
+		"./getCategoryInfo": "./getCategoryInfo.js",
 		"./getConditionsForCategory": "./getConditionsForCategory.js",
 		"./getRange": "./getRange.js",
 		"./getRangePairs": "./getRangePairs.js",
