@@ -75,7 +75,7 @@
 		"@types/tape": "^5.8.1",
 		"auto-changelog": "^2.5.0",
 		"es-value-fixtures": "^1.7.1",
-		"eslint": "^9.39.2",
+		"eslint": "^10.0.3",
 		"for-each": "^0.3.5",
 		"in-publish": "^2.0.1",
 		"jiti": "^0.0.0",
