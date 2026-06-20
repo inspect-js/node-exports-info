@@ -38,8 +38,7 @@ var dirSlashCategories = {
 	'broken-dir-slash-conditions': true,
 	patterns: true,
 	'pattern-trailers': true,
-	'pattern-trailers+json-imports': true,
-	'subpath-imports-slash': true
+	'pattern-trailers+json-imports': true
 };
 
 /** @type {import('./getCategoryFlags')} */

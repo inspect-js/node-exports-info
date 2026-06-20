@@ -120,8 +120,8 @@ test('getCategoryFlags', function (t) {
 
 		st.deepEqual(
 			getCategoryFlags('subpath-imports-slash'),
-			{ patterns: true, patternTrailers: true, dirSlash: true },
-			'subpath-imports-slash has all flags'
+			{ patterns: true, patternTrailers: true, dirSlash: false },
+			'subpath-imports-slash has patterns and patternTrailers but not dirSlash'
 		);
 
 		st.end();
