@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.6.2](https://github.com/inspect-js/node-exports-info/compare/v1.6.1...v1.6.2) - 2026-06-22
+
+### Commits
+
+- [Fix] `node-addons` condition is supported from 16.10, not 16.9 [`d920e6b`](https://github.com/inspect-js/node-exports-info/commit/d920e6b6ae97f8ef7952fccd590395a3fa10571c)
+
 ## [v1.6.1](https://github.com/inspect-js/node-exports-info/compare/v1.6.0...v1.6.1) - 2026-06-22
 
 ### Commits
