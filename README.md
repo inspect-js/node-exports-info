@@ -35,6 +35,7 @@ Info about node `exports` field support: version ranges, categories, etc.
  - `node-exports-info/isCategory`: takes a category; returns true if it’s a known category
 
 ## Related packages
+ - [`node-imports-info`](https://www.npmjs.com/package/node-imports-info): the same, for the `imports` field
  - [`has-package-exports`](https://www.npmjs.com/package/has-package-exports): feature-detect your node version’s `exports` support
 
 ## Tests
