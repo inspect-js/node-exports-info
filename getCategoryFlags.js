@@ -1,6 +1,6 @@
 'use strict';
 
-var $RangeError = require('es-errors/range');
+var makeGetCategoryFlags = require('node-package-field-info/makeGetCategoryFlags');
 
 var isCategory = require('./isCategory');
 
@@ -45,14 +45,8 @@ var dirSlashCategories = {
 };
 
 /** @type {import('./getCategoryFlags')} */
-module.exports = function getCategoryFlags(category) {
-	if (!isCategory(category)) {
-		throw new $RangeError('invalid category ' + category);
-	}
-
-	return {
-		patterns: !!patternsCategories[category],
-		patternTrailers: !!patternTrailersCategories[category],
-		dirSlash: !!dirSlashCategories[category]
-	};
-};
+module.exports = makeGetCategoryFlags(isCategory, {
+	patterns: patternsCategories,
+	patternTrailers: patternTrailersCategories,
+	dirSlash: dirSlashCategories
+});

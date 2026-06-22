@@ -1,10 +1,8 @@
 'use strict';
 
-var entries = require('object.entries');
+var makeGetRangePairs = require('node-package-field-info/makeGetRangePairs');
 
 var ranges = require('./ranges');
 
 /** @type {import('./getRangePairs')} */
-module.exports = function getRangePairs() {
-	return entries(ranges);
-};
+module.exports = makeGetRangePairs(ranges);
