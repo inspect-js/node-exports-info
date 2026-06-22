@@ -89,6 +89,12 @@ test('getCategoryFlags', function (t) {
 		);
 
 		st.deepEqual(
+			getCategoryFlags('pattern-trailers-no-node-addons'),
+			{ patterns: true, patternTrailers: true, dirSlash: true },
+			'pattern-trailers-no-node-addons has all flags'
+		);
+
+		st.deepEqual(
 			getCategoryFlags('pattern-trailers+json-imports'),
 			{ patterns: true, patternTrailers: true, dirSlash: true },
 			'pattern-trailers+json-imports has all flags'
