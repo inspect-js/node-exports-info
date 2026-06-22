@@ -4,8 +4,10 @@ var $RangeError = require('es-errors/range');
 
 var isCategory = require('./isCategory');
 
+/** @import { Category } from './types' */
+
 // Categories that support patterns (wildcard *)
-/** @type {{ [k in import('./types').Category | '__proto__']?: k extends '__proto__' ? null : true }} */
+/** @type {{ [k in Category | '__proto__']?: k extends '__proto__' ? null : true }} */
 var patternsCategories = {
 	__proto__: null,
 	patterns: true,
@@ -15,12 +17,11 @@ var patternsCategories = {
 	'pattern-trailers-no-dir-slash': true,
 	'pattern-trailers-no-dir-slash+json-imports': true,
 	'require-esm': true,
-	'strips-types': true,
-	'subpath-imports-slash': true
+	'strips-types': true
 };
 
 // Categories that support pattern trailers (suffix after *)
-/** @type {{ [k in import('./types').Category | '__proto__']?: k extends '__proto__' ? null : true }} */
+/** @type {{ [k in Category | '__proto__']?: k extends '__proto__' ? null : true }} */
 var patternTrailersCategories = {
 	__proto__: null,
 	'pattern-trailers': true,
@@ -29,12 +30,11 @@ var patternTrailersCategories = {
 	'pattern-trailers-no-dir-slash': true,
 	'pattern-trailers-no-dir-slash+json-imports': true,
 	'require-esm': true,
-	'strips-types': true,
-	'subpath-imports-slash': true
+	'strips-types': true
 };
 
 // Categories that support directory slash exports (ending with /)
-/** @type {{ [k in import('./types').Category | '__proto__']?: k extends '__proto__' ? null : true }} */
+/** @type {{ [k in Category | '__proto__']?: k extends '__proto__' ? null : true }} */
 var dirSlashCategories = {
 	__proto__: null,
 	'broken-dir-slash-conditions': true,

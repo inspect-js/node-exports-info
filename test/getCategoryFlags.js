@@ -124,12 +124,6 @@ test('getCategoryFlags', function (t) {
 			'strips-types has patterns and patternTrailers but not dirSlash'
 		);
 
-		st.deepEqual(
-			getCategoryFlags('subpath-imports-slash'),
-			{ patterns: true, patternTrailers: true, dirSlash: false },
-			'subpath-imports-slash has patterns and patternTrailers but not dirSlash'
-		);
-
 		st.end();
 	});
 

@@ -82,8 +82,7 @@ var nodeAddonsCategories = {
 	'pattern-trailers-no-dir-slash': true,
 	'pattern-trailers-no-dir-slash+json-imports': true,
 	'require-esm': true,
-	'strips-types': true,
-	'subpath-imports-slash': true
+	'strips-types': true
 };
 
 // categories that support module-sync condition (added in v22.12)
@@ -91,8 +90,7 @@ var nodeAddonsCategories = {
 var moduleSyncCategories = {
 	__proto__: null,
 	'require-esm': true,
-	'strips-types': true,
-	'subpath-imports-slash': true
+	'strips-types': true
 };
 
 /** @type {import('./getConditionsForCategory')} */
