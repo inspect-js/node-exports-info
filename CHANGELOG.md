@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.0.0](https://github.com/inspect-js/node-exports-info/compare/v1.6.2...v2.0.0) - 2026-06-23
+
+### Commits
+
+- [Refactor] use `node-package-field-info` for the shared accessor logic [`ba47eb9`](https://github.com/inspect-js/node-exports-info/commit/ba47eb9d70f7168768730780858c585419280889)
+- [Breaking] remove the `subpath-imports-slash` category [`a9ad79a`](https://github.com/inspect-js/node-exports-info/commit/a9ad79a8c0230c4809d243f4c7d716e6e799f76b)
+- [meta] npmignore some files [`7577699`](https://github.com/inspect-js/node-exports-info/commit/7577699c6e1e698ab1f12def9a548ed612093588)
+- [Dev Deps] add missing dep [`788ff88`](https://github.com/inspect-js/node-exports-info/commit/788ff88838a4d49cfebd7c2fb18f44028608ddfc)
+
 ## [v1.6.2](https://github.com/inspect-js/node-exports-info/compare/v1.6.1...v1.6.2) - 2026-06-22
 
 ### Commits
